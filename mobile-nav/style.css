@@ -1,0 +1,166 @@
+*,
+*::before,
+*::after {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Roboto, sans-serif;
+}
+
+body {
+
+    height: 100vh;
+    background-color: lightgray;
+}
+
+
+
+
+
+.mobile-navigation {
+
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  
+  
+}
+
+.mobile-navigation .material-icons {
+
+    font-size: 35px;
+}
+
+.nav[data-visibility = "false"] {
+    display: none;
+}
+
+
+
+.nav {
+
+    position: absolute;
+    display: flex;
+    top: 12vh;
+    justify-content: space-between; 
+    width: 90%;
+    
+    background-color: #ffff;
+    border-radius: 10px;
+    padding: 10px 15px;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.navigation * {
+    
+    text-decoration: none;
+    color: #333;
+    list-style: none;
+    margin-bottom: 2.5rem;
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+}
+
+
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-inline: 1.5rem;
+    margin-top: 1rem;
+   
+    background-color:#ffff;
+    padding: 15px 0;
+    border-radius: 10px;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+   
+}
+
+
+
+@media(min-width: 768px) {
+
+
+    h1 {
+        font-size: 1.5rem;
+        padding-left: 1rem;
+    }
+
+    .mobile-navigation {
+
+        display: none;
+    }
+    .nav[data-visibility = "false"] {
+        display: flex;
+        
+    }
+
+    .nav {
+
+        position: static;
+        justify-content: flex-end;
+       
+
+        
+    }
+
+    .navigation {
+
+        display: flex;
+        width: 50%;
+        max-width: 750px;
+        justify-content: space-between;
+        align-items: center;
+       
+    }
+
+    .navigation * {
+
+        margin-bottom: 0;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+  }
+  
