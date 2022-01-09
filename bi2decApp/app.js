@@ -17,7 +17,9 @@ function bintoDeci (value){
        sum.push(number[i] * (Math.pow(2, [i])));
         
     }
-   return sum;
+   
+    return sum = sum.reduce((x, y) => x + y);
+
     
     
 }
