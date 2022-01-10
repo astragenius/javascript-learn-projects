@@ -8,7 +8,6 @@ const output2 = document.getElementById('output2');
 
 
 
-
 function bintoDeci (){
     
     const input = document.getElementById('input').value;
@@ -17,6 +16,7 @@ function bintoDeci (){
     console.log(input);
     /* converting number to array */
     if(pattern.test(input)) {
+        resetError();
         let number = Array.from(String(input), Number);
         
         /* reverse iteration for loop */
@@ -29,9 +29,9 @@ function bintoDeci (){
         renderDom(sum, input);   
         
     }else {
-        return;
+        error();
     }
-
+    
     
 }
 
@@ -41,8 +41,20 @@ function renderDom(value, input) {
     
 }
 
+function error () {
+    const section = document.getElementById('form');
+    section.classList.toggle('section');
+    
+}
+
+function resetError() {
+    const section = document.getElementById('form');
+    section.classList.toggle('section');
+}
+
 convert.addEventListener('click', bintoDeci);
 reset.addEventListener('click', () => {
    
-    
+    output1.innerText = "0";
+    output2.innerText = "0";
 })
