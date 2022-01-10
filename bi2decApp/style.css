@@ -35,6 +35,7 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  font-family: 'Roboto', sans-serif;
 }
 
 /* A elements that don't have a class get default styles */
@@ -83,6 +84,52 @@ select {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  border: 2px solid magenta;
 }
+
+section {
+  background-color: #FEDD9E;
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  
+  
+}
+.output {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.binary,
+.decimal {
+  margin: 1em 0;
+}
+
+
+input,
+label,
+button {
+  display: block;
+}
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  
+  
+}
+.btn {
+  width: 100%;
+  background: none;
+  border: none;
+  background-color: #FFBC57;
+  margin-top: 2em;
+  padding: 0.5em;
+  border-radius: 0.4rem;
+  font-size: 19px;
+  cursor: pointer;
+
+}
+
+
+
 

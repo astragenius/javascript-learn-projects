@@ -16,29 +16,28 @@
 
             <h1>Binary to Decimal number Converter</h1>
 
-            <form action="#">
 
 
-                <label for="input" name="" >
-                    Enter Binary number
-                    <input id="input" type="text" maxlength="6" pattern="\b[01]+\b">
-                </label>
+            <label for="input" name="" >Enter Binary number</label>
+            <input id="input" type="text" maxlength="6" pattern="\b[01]+\b" required>
                
-
-                <button id="convert-btn">Convert</button>
-                <button id="reset-btn">Reset</button>
-
-            </form>
-
-
+            
             <div class="output">
-
-                <h2>Decimal number</h2>
-
-                <span id="output" class="decNumber">35</span>
-
+                <div class="binary">
+                    <h3>The Binary number:</h3>
+                    <span id="output1" class="decNumber">111111</span>  
+                </div>
+                <div class="decimal">
+                    <h3>The Decimal number:</h3>
+                    <span id="output2" class="decNumber">35</span>
+                </div>
+            
             </div>
-
+            <div class="btn-container">
+                
+                <button id="convert-btn" class="btn">Convert</button>
+                <button id="reset-btn" class="btn">Reset</button>
+            </div>
 
 
         </section>
