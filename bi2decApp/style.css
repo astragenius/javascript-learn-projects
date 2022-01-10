@@ -98,11 +98,28 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0 2em;
+  width: 100%;
+  background-color: #FFF1D4;
+  margin-top: 1em;
 }
 
 .binary,
 .decimal {
-  margin: 1em 0;
+  background-color: #ffff;
+  margin: 2em 0;
+  text-align: center;
+  width: 100%;
+  padding: 1em 0;
+  border-radius: 0.2rem;
+  color: #141414;
+}
+
+span {
+  display: inline-block;
+  padding: 0.25em 0;
+  font-size: 30px;
+  font-weight: 900;
 }
 
 
@@ -127,7 +144,56 @@ button {
   border-radius: 0.4rem;
   font-size: 19px;
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  color: #141414;
+  font-weight: 800;
 
+}
+
+.btn:hover {
+  background-color: #FFF1D4;
+}
+
+label {
+  margin-top: 1em;
+  font-size: 18px;
+}
+
+.input {
+  margin-top: 1em;
+  padding: 0.7em;
+  border: none;
+  border-radius: 10px;
+}
+
+
+
+.input::-webkit-input-placeholder {
+  color: #CC800E;
+}
+
+
+
+.input::-moz-placeholder {
+  color: #CC800E;
+}
+
+
+
+.input:-ms-input-placeholder {
+  color: #CC800E;
+}
+
+
+
+.input::-ms-input-placeholder {
+  color: #CC800E;
+}
+
+
+
+.input::placeholder {
+  color: #CC800E;
 }
 
 
