@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+    <title>Border Radius Preview</title>
+</head>
+<body>
+    
+    <main class="flex-container">
+        <section class="container">
+            <h1>Border-radius Previewer</h1>
+            <div id="preview" class="preview"></div>
+
+            <div class="clipboard__container">
+                <div class="clipboard">
+                    <span>border-radius:</span> <span>0px,</span> <span>0px,</span> <span>0px,</span> <span>0px;</span>
+                </div>
+                <button class="btn">copy</button>
+            </div>
+            
+            <div class="input__container">
+
+                <label for="border-radius-tl">Border-radius-top-left</label>
+                <input type="range" name="border-radius-top-left" id="border-radius-tl" max="100">
+    
+                <label for="border-radius-tr">Border-radius-top-right</label>
+                <input type="range" name="border-radius-top-right" id="border-radius-tr" max="100">
+    
+                <label for="border-radius-bl">Border-radius-bottom-left</label>
+                <input type="range" name="border-radius-bottom-left" id="border-radius-bl" max="100">
+    
+                <label for="border-radius-br">Border-radius-bottom-right</label>
+                <input type="range" name="border-radius-bottom-right" id="border-radius-br" max="100">
+            </div>
+
+        </section>
+    </main>
+    
+</body>
+</html>
