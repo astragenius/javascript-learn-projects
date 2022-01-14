@@ -76,3 +76,40 @@ select {
     scroll-behavior: auto !important;
   }
 }
+
+body {
+  background-color: #F5F6FE;
+  color: #262832;
+}
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.side-nav {
+  border: 2px solid black;
+  background-color: #EBEDFC;
+  padding: 2em;
+  flex: 1;
+}
+
+.side-nav li {
+  padding: 1em;
+  list-style: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+.side-nav li:hover {
+  background-color: #f5f6fe;;
+}
+
+.main-site {
+  border: 2px solid black;
+  padding: 2em;
+  flex: 1;
+}
