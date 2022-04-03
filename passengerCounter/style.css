@@ -88,6 +88,8 @@ body {
 main {
     text-align: center;
     max-height: 100vh;
+    border: 2px solid black;
+    padding: 0.5rem;
 }
 h1 {
     margin-top: 10px;
