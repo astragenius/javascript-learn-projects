@@ -229,4 +229,33 @@ const data = [
         "bs": "target end-to-end models"
       }
     }
-  ]
+];
+
+
+const listContent = document.getElementById('col4');
+
+
+
+let r = data.reduce((acc, curr) => {
+  
+  for([key, value] of Object.entries(curr)) {
+    
+    if (! acc[key]) acc[key] = []
+    acc[key].push( curr[key])
+  }
+  return acc;
+}, {})
+
+
+const {name, username, email} = r;
+
+
+function createBtn(name) {
+  const listStyleClass = 'list-group-item list-group-item-action';
+  
+  return `<button type="button" class="${listStyleClass}">${name}</button>` 
+
+}
+
+
+console.log(createBtn("testBTN"));
