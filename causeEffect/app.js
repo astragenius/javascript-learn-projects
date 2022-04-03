@@ -252,10 +252,31 @@ const {name, username, email} = r;
 
 function createBtn(name) {
   const listStyleClass = 'list-group-item list-group-item-action';
-  
-  return `<button type="button" class="${listStyleClass}">${name}</button>` 
+  const btn = document.createElement('button');
+  btn.setAttribute('class', listStyleClass);
+  btn.textContent = name;
+
+  return btn;
 
 }
 
 
-console.log(createBtn("testBTN"));
+
+function createBtnList(name) {
+  
+  const listGroup = document.createElement('div');
+  listGroup.setAttribute('class', 'list-group');
+  
+  for(let i = 0; i <= name.length; i++) {
+
+    listGroup.appendChild(createBtn(name[i]));
+    
+  }
+  listContent.appendChild(listGroup)
+  console.log(listGroup);
+  
+
+}
+
+
+createBtnList(name)
