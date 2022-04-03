@@ -233,7 +233,13 @@ const data = [
 
 
 const listContent = document.getElementById('col4');
+const tabelContent = document.getElementById('col8');
 
+
+for(let i = 0; i < data.length; i++) {
+
+  console.log(data[i].id)
+}
 
 
 let r = data.reduce((acc, curr) => {
@@ -249,18 +255,21 @@ let r = data.reduce((acc, curr) => {
 
 const {name, username, email} = r;
 
+function showData(e) {
+  let btn = e.target;
+  console.log(btn.innerText)
+}
 
 function createBtn(name) {
   const listStyleClass = 'list-group-item list-group-item-action';
   const btn = document.createElement('button');
   btn.setAttribute('class', listStyleClass);
   btn.textContent = name;
+  btn.addEventListener('click', showData);
 
   return btn;
 
 }
-
-
 
 function createBtnList(name) {
   
@@ -270,13 +279,20 @@ function createBtnList(name) {
   for(let i = 0; i <= name.length; i++) {
 
     listGroup.appendChild(createBtn(name[i]));
-    
   }
   listContent.appendChild(listGroup)
-  console.log(listGroup);
-  
 
 }
+function createCard(content) {
+
+  const card = document.createElement('div');
+  card.setAttribute('class', 'card');
+  tabelContent.appendChild(card);
 
 
+}
 createBtnList(name)
+
+
+
+const list = document.getElementsByTagName('button');
