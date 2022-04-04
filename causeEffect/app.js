@@ -256,10 +256,10 @@ let r = data.reduce((acc, curr) => {
 const {name, username, email} = r;
 
 function showData(e) {
-  let btn = e.target;
-  let dataset = btn.dataset.id;
-  let personData = data[dataset];
-  console.log(personData)
+  let dataset = e.target.dataset.id;
+  let personDataObject = data[dataset];
+  createTable(personDataObject);
+  
 }
 
 function createBtn(name, index) {
@@ -297,7 +297,10 @@ function createCard(content) {
 
 }
 
-function createTable() {
+function createTable(obj) {
+
+  let { name, username, email, phone, website, address, company } = obj;
+  console.log(username, email, address.city)
 
 }
 createBtnList(name)
