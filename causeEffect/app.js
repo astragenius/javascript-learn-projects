@@ -238,7 +238,7 @@ const tabelContent = document.getElementById('col8');
 
 for(let i = 0; i < data.length; i++) {
 
-  console.log(data[i].id)
+  
 }
 
 
@@ -257,13 +257,16 @@ const {name, username, email} = r;
 
 function showData(e) {
   let btn = e.target;
-  console.log(btn.innerText)
+  let dataset = btn.dataset.id;
+  let personData = data[dataset];
+  console.log(personData)
 }
 
-function createBtn(name) {
+function createBtn(name, index) {
   const listStyleClass = 'list-group-item list-group-item-action';
   const btn = document.createElement('button');
   btn.setAttribute('class', listStyleClass);
+  btn.setAttribute('data-id', index)
   btn.textContent = name;
   btn.addEventListener('click', showData);
 
@@ -278,17 +281,23 @@ function createBtnList(name) {
   
   for(let i = 0; i <= name.length; i++) {
 
-    listGroup.appendChild(createBtn(name[i]));
+    listGroup.appendChild(createBtn(name[i], i));
   }
   listContent.appendChild(listGroup)
 
 }
 function createCard(content) {
-
+  const h4 = document.createElement('h4')
   const card = document.createElement('div');
   card.setAttribute('class', 'card');
+  h4.textContent = 'Test'
+  card.appendChild(h4);
+  card.appendChild(content);
   tabelContent.appendChild(card);
 
+}
+
+function createTable() {
 
 }
 createBtnList(name)
