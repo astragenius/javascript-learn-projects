@@ -236,10 +236,7 @@ const listContent = document.getElementById('col4');
 const tabelContent = document.getElementById('col8');
 
 
-for(let i = 0; i < data.length; i++) {
 
-  
-}
 
 
 let r = data.reduce((acc, curr) => {
@@ -300,7 +297,7 @@ function createCard(content) {
 function createTable(obj) {
 
   let { name, username, email, phone, website, address, company } = obj;
-  console.log(username, email, address.city)
+  
 
 }
 createBtnList(name)
