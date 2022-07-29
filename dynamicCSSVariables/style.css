@@ -58,5 +58,135 @@
     /* color */
     --clr-white: #ffff;
     --clr-light: #e6e4dd;
+
+    --clr-light-yellow: #f8f4e7;
     
+    --clr-dark-blue: #3f3e68;
+    --clr-light-blue: #a7a6c3;
+
+    --clr-red: #dc3545;
+
   }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--clr-dark-blue);
+  background-color: var(--clr-light);
+}
+
+
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-container {
+  
+  
+  border-radius: 35px;
+  background-color: var(--clr-light-yellow);
+  padding: 3rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: var(--clr-white);
+  border-radius: 15px;
+  height: 700px;
+  padding: 0 1.5rem;
+  width: 500px;
+}
+
+.error-box {
+  display: inline-block;
+  width: 80%;
+  text-align: right;
+}
+
+.form-heading {
+  font-weight: 900;
+  font-size: 32px;
+}
+ 
+
+.form-body {
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    border: none;
+    
+
+}
+
+.form-body label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: 500;
+    
+}
+
+.form-input {
+  padding: 1em 0;
+  width: 100%;
+  border: 1px solid var(--clr-dark-blue);
+  border-radius: 5px;
+  margin-bottom: 2em;
+}
+
+input::-webkit-input-placeholder {
+  color: var(--clr-dark-blue);
+  margin-left: 1.5em;
+  font-weight: 300;
+}
+
+input::-moz-placeholder {
+  color: var(--clr-dark-blue);
+  margin-left: 1.5em;
+  font-weight: 300;
+}
+
+input:-ms-input-placeholder {
+  color: var(--clr-dark-blue);
+  margin-left: 1.5em;
+  font-weight: 300;
+}
+
+input::-ms-input-placeholder {
+  color: var(--clr-dark-blue);
+  margin-left: 1.5em;
+  font-weight: 300;
+}
+
+input::placeholder {
+  color: var(--clr-dark-blue);
+  margin-left: 1.5em;
+  font-weight: 300;
+}
+
+.btn {
+  all: unset;
+  color: var(--clr-white);
+  padding: 1em 1.5em;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 5px;
+  margin-bottom: 1em;
+}
+
+.btn-submit {
+  margin-top: 4em;
+  background-color: var(--clr-dark-blue);
+
+  
+}
+
+.btn-cancel {
+  
+  background-color: var(--clr-red);
+}
