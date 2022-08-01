@@ -4,23 +4,33 @@ const logInBtn = document.querySelector('.btn-submit');
 let password = 'mypassword';
 let userID = 'testuser';
 
-/* console.log(styleObj1)
-console.log(styleObj1.getPropertyValue('height'));
 console.log(styleObj)
-let selector = ':root';
-
-let findStyle = styleObj.find(el => el.selectorText === selector)
-let propertyName = '--clr-red'; */
-//findStyle.style.setProperty(propertyName, 'blue')
 
 
 function validateData() {
-    const userIdInput = document.getElementById('user-id').value;
-    const userPassword = document.getElementById('user-password').value;
+    const userIdInput = document.getElementById('user-id')
+    const userPassword = document.getElementById('user-password')
 
+
+    function setWarning(selector) {
+        let color = 'var(--clr-warning)';
+        let findStyle = styleObj.find(el => el.selectorText === selector)
+        findStyle.style["background-color"] = color
+        
+    }
+
+    function setError(selector) {
+        let color = 'var(--clr-red)';
+        let findStyle = styleObj.find(el => el.selectorText === selector)
+        findStyle.style["background-color"] = color
+    }
+
+    function checkForSpaces(s) {
+        return /\s/g.test(s);
+    }
 
     function checkUserID() {
-        if(userIdInput === userID) {
+        if(userIdInput.value === userID) {
             return true
         }else {
             return false;
@@ -28,7 +38,7 @@ function validateData() {
     }
 
     function checkPassword() {
-        if(userPassword === password) return true
+        if(userPassword.value === password) return true
 
         return false;
     }

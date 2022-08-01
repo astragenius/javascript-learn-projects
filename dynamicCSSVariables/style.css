@@ -65,6 +65,7 @@
     --clr-light-blue: #a7a6c3;
 
     --clr-red: #dc3545;
+    --clr-warning: #ffc107;
 
   }
 
@@ -134,9 +135,19 @@ body {
 .form-input {
   padding: 1em 0;
   width: 100%;
+  
   border: 1px solid var(--clr-dark-blue);
   border-radius: 5px;
   margin-bottom: 2em;
+
+  
+}
+
+#user-id {
+  background-color: var(--clr-white);
+}
+#user-password {
+  background-color: var(--clr-white);
 }
 
 input::-webkit-input-placeholder {
