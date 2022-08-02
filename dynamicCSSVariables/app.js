@@ -19,9 +19,16 @@ function validateData() {
         
     }
 
+    function setValidated(selector) {
+        let color = 'var(--clr-light)';
+        let findStyle = styleObj.find(el => el.selectorText === selector)
+        findStyle.style["background-color"] = color
+    } 
+
     function setError(selector) {
         let color = 'var(--clr-red)';
         let findStyle = styleObj.find(el => el.selectorText === selector)
+
         findStyle.style["background-color"] = color
     }
 
@@ -30,22 +37,41 @@ function validateData() {
     }
 
     function checkUserID() {
-        if(userIdInput.value === userID) {
-            return true
-        }else {
-            return false;
-        }
+        return userIdInput.value === userID;
+        
     }
 
     function checkPassword() {
-        if(userPassword.value === password) return true
 
-        return false;
+        return userPassword.value === password
+        
+    }
+
+    
+
+    function validation() {
+
+       
+        if(checkForSpaces(userIdInput.value)) {
+            setWarning('#user-id')
+        }else if(checkUserID()){
+            setValidated('#user-id')
+        } else {
+            setError('#user-id')
+        }
+        
+        if(checkForSpaces(userPassword.value)) {
+            setWarning('#user-password')
+        }else if (checkPassword()) {
+            setValidated('#user-password')
+        }else {
+            setError('#user-password')
+        }
+
     }
 
 
-
-
+    validation();
 }
 
 
