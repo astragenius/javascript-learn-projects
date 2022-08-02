@@ -14,14 +14,14 @@ yellow.
 and the background color of the text box will change to light red.
 -   [x] Users can see a warning message if the password doesn't match 'mypassword'
 and the background color of the text box will change to light red.
--   [ ] Users can click the 'Cancel' button to clear the text boxes and reset
+-   [.] Users can click the 'Cancel' button to clear the text boxes and reset
 their background colors to white.
 
 ## Bonus features
 
--   [ ] Users can see the color of the text box border change when an error is
+-   [x] Users can see the color of the text box border change when an error is
 detected
--   [ ] Users can see the size and f**ont of the contents of the text box change
+-   [x] Users can see the size and f**ont of the contents of the text box change
 when an error is detected.
 
 ## Useful links and resources
