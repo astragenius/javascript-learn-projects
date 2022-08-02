@@ -65,7 +65,12 @@
     --clr-light-blue: #a7a6c3;
 
     --clr-red: #dc3545;
+    --clr-red-light: #db949c;
     --clr-warning: #ffc107;
+
+    --clr-warning-light: hsl(46, 75%, 78%);
+
+    --clr-green: #198754;
 
   }
 
@@ -136,7 +141,8 @@ body {
   padding: 1em 0;
   width: 100%;
   
-  border: 1px solid var(--clr-dark-blue);
+  outline: 3px solid var(--clr-dark-blue);
+  outline-offset: -3px;
   border-radius: 5px;
   margin-bottom: 2em;
 

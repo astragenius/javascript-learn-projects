@@ -1,51 +1,57 @@
 const styleObj = [...document.styleSheets[1].rules];
-const styleObj1 = document.styleSheets[1].cssRules[2].style;
+
 const logInBtn = document.querySelector('.btn-submit');
+const cancelBtn = document.getElementById('btn-cancel');
 let password = 'mypassword';
 let userID = 'testuser';
 
-console.log(styleObj)
 
 
-function validateData() {
+
+function ValidateData() {
     const userIdInput = document.getElementById('user-id')
     const userPassword = document.getElementById('user-password')
+    
 
-
-    function setWarning(selector) {
+    function setWarning(id) {
+        const message = document.querySelector(`#${id}-error`)
         let color = 'var(--clr-warning)';
-        let findStyle = styleObj.find(el => el.selectorText === selector)
-        findStyle.style["background-color"] = color
+        let lightColor = 'var(--clr-warning-light)';
+        let findStyle = styleObj.find(el => el.selectorText === `#${id}`)
+        findStyle.style["background-color"] = lightColor;
+        findStyle.style["outline-color"] = color
+        message.style.color = color
+        message.textContent = `Your ${id} has whitespace!!`
         
     }
 
-    function setValidated(selector) {
-        let color = 'var(--clr-light)';
-        let findStyle = styleObj.find(el => el.selectorText === selector)
+    function setValidated(id) {
+        const message = document.querySelector(`#${id}-error`)
+        let color = 'var(--clr-white)';
+        let validateColor = 'var(--clr-green)'
+        let findStyle = styleObj.find(el => el.selectorText === `#${id}`)
         findStyle.style["background-color"] = color
+        findStyle.style["outline-color"] = validateColor;
+        message.style.color = validateColor;
+        message.textContent = `Correct`;
     } 
 
-    function setError(selector) {
+    function setError(id) {
+        const message = document.querySelector(`#${id}-error`)
         let color = 'var(--clr-red)';
-        let findStyle = styleObj.find(el => el.selectorText === selector)
-
-        findStyle.style["background-color"] = color
+        let lightcolor = 'var(--clr-red-light)'
+        let findStyle = styleObj.find(el => el.selectorText === `#${id}`)
+        findStyle.style["background-color"] = lightcolor;
+        findStyle.style["outline-color"] = ' var(--clr-red)';
+        message.style.color = color;
+        message.textContent = `Your ${id} is incorrect!!`;
     }
 
-    function checkForSpaces(s) {
-        return /\s/g.test(s);
-    }
+    function checkForSpaces(s) { return /\s/g.test(s); }
 
-    function checkUserID() {
-        return userIdInput.value === userID;
-        
-    }
+    function checkUserID() { return userIdInput.value === userID; }
 
-    function checkPassword() {
-
-        return userPassword.value === password
-        
-    }
+    function checkPassword() { return userPassword.value === password }
 
     
 
@@ -53,26 +59,42 @@ function validateData() {
 
        
         if(checkForSpaces(userIdInput.value)) {
-            setWarning('#user-id')
+            setWarning('user-id')
         }else if(checkUserID()){
-            setValidated('#user-id')
+            setValidated('user-id')
         } else {
-            setError('#user-id')
+            setError('user-id')
         }
         
         if(checkForSpaces(userPassword.value)) {
-            setWarning('#user-password')
+            setWarning('user-password')
         }else if (checkPassword()) {
-            setValidated('#user-password')
+            setValidated('user-password')
         }else {
-            setError('#user-password')
+            setError('user-password')
         }
 
     }
 
+    function reset(inputUser, inputPassword) {
+        const message = [...document.querySelectorAll('.error-box')]
+        message.forEach(el => { el.textContent = ''; })
+       
+        let findInputUser = styleObj.find(el => el.selectorText === inputUser)
+        let findInputPassword = styleObj.find(el => el.selectorText === inputPassword)
+        let inputArray = [findInputUser, findInputPassword]
+        inputArray.forEach(el => {
+            el.style['background-color'] = 'var(--clr-white)';
+            el.style["outline-color"] = 'var(--clr-dark-blue)'
+        })
+    }
 
-    validation();
+
+   return { validation, reset }
 }
 
 
-logInBtn.addEventListener('click', validateData);
+const dataValidation = ValidateData();
+
+logInBtn.addEventListener('click', () => { dataValidation.validation()});
+cancelBtn.addEventListener('click', () => { dataValidation.reset('#user-id', '#user-password') })
