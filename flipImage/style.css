@@ -53,7 +53,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 
 :root {
-    --hue: 240;
+    --hue: 140;
     --size: 1.5rem;
     --radius: .2em;
     --tspeed-fast: 150ms;
@@ -187,6 +187,7 @@ h1 {
         .05em .1em .9em hsl(var(--txt) / .3),
         0 0 0 -.1em hsl(var(--bg)),
         0 0 0 -.2em hsl(var(--txt));
+
 }
 
 .control-btn-container {
@@ -242,4 +243,45 @@ h1 {
   flex: 1;
   padding: .4em 1.4em;
   
+}
+
+
+/* Animation */
+@-webkit-keyframes flip-with-scale {
+  0% {
+      transform: perspective(400px) scaleX(1);
+  }
+
+  100% {
+      transform: perspective(400px) scaleX(-1);
+  }
+}
+@keyframes flip-with-scale {
+  0% {
+      transform: perspective(400px) scaleX(1);
+  }
+
+  100% {
+      transform: perspective(400px) scaleX(-1);
+  }
+}
+
+@-webkit-keyframes flip-with-rotate {
+  0% {
+      transform: perspective(400px) rotateY(0);
+  }
+
+  100% {
+      transform: perspective(400px) rotateY(180deg);
+  }
+}
+
+@keyframes flip-with-rotate {
+  0% {
+      transform: perspective(400px) rotateY(0);
+  }
+
+  100% {
+      transform: perspective(400px) rotateY(180deg);
+  }
 }
