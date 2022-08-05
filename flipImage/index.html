@@ -17,27 +17,29 @@
         <h1>Image Flipper APP</h1>
 
         <div class="url-input-container">
-            <input type="search" id="search-bar" placeholder="Enter URL Adress">
-            <label for="search-bar"></label>
-            <button>Display</button>
+            <input class="input" type="search" id="search-bar" placeholder="">
+            <label class="input-label" for="search-bar">Enter URL Adress</label>
+            <button class="btn btn-display">
+                <span class="material-symbols-outlined">search</span>
+                Display</button>
         </div>
         <div class="image-container">
-            <img id="image" src="" alt="">
+            <img class="img" id="image" src="./img/pexels-juan-samudio-9320207.jpg" alt="">
         </div>
         <div class="control-btn-container">
-            <button class="btn">
+            <button class="btn btn-control">
                 <span class="material-symbols-outlined">chevron_left</span>
                 Left
             </button>
-            <button class="btn">
+            <button class="btn btn-control">
                 <span class="material-symbols-outlined">expand_less</span>
                     Up
             </button>
-            <button class="btn">
+            <button class="btn btn-control">
                 <span class="material-symbols-outlined">chevron_right</span>
                     Right
             </button>
-            <button class="btn">
+            <button class="btn btn-control">
                     <span class="material-symbols-outlined">expand_more</span>
                     Down
             </button>
