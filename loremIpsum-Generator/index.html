@@ -4,11 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic" rel="stylesheet" />
     <link rel="stylesheet" href="style.css">
     <script defer src="app.js"></script>
     <title>LoremIpsum generator</title>
 </head>
 <body>
     
+    <main class="container">
+
+        <h1 class="heading">Lorem Ipsum Generator</h1>
+
+        <section class="generator-main">
+
+            <div class="generator-input-container">
+                <input type="text" value="100" name="" id="input-lenght">
+                <label for="input-lenght"></label>
+
+                <select name="value" id="select-option">
+                    <option value="characters">Characters</option>
+                    <option selected="selected" value="words">Words</option>
+                    <option value="paragraphs">Paragraphs</option>
+                </select>
+
+                <input type="button" value="Update" name="update-btn">
+                
+            </div>
+            <div class="generator-output-container">
+                <textarea name="output" id="loremText"  cols="30" rows="10"></textarea>
+                <div><input type="button" value="Copy Text"></div>
+            </div>
+
+            
+
+        </section>
+
+        
+
+    </main>
+
+
 </body>
 </html>
