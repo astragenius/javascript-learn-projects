@@ -86,7 +86,6 @@ body {
     min-height: 100vh;
     display: grid;
     place-items: center;
-    background-color: hsl(var(--bg));
     color: hsl(var(--txt))
 }
 
@@ -101,7 +100,8 @@ body {
     gap: 1.5vmax;
     border-radius: .5em;
     padding: 4em;
-
+    background-color: hsl(var(--bg));
+    
 
     box-shadow: 
         .05em .1em .9em hsl(var(--txt) / .2),
